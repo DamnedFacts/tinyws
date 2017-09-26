@@ -1,0 +1,165 @@
+{
+   "agent": "AutobahnTestSuite/0.7.5-0.10.9",
+   "behavior": "FAILED",
+   "behaviorClose": "FAILED",
+   "case": 92,
+   "closedByMe": true,
+   "createStats": true,
+   "createWirelog": true,
+   "description": "Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xcebae1bdb9cf83cebcce",
+   "droppedByMe": false,
+   "duration": 2,
+   "expectation": "The connection is failed immediately, since the payload is not valid UTF-8.",
+   "expected": {
+      "OK": []
+   },
+   "expectedClose": {
+      "closeCode": [
+         1007
+      ],
+      "closedByMe": false,
+      "closedByWrongEndpointIsFatal": true,
+      "requireClean": false
+   },
+   "failedByMe": true,
+   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.5-0.10.9\r\nHost: 127.0.0.1:7079\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: E+hiuX0/F+h2Y6OmiPvaGA==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.7.5-0.10.9\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Location: ws://127.0.0.1:7079/\r\nSec-WebSocket-Accept: vfCBmqGeRUU6gc/vRncgmXfPmPs=\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "id": "6.6.10",
+   "isServer": false,
+   "localCloseCode": 1007,
+   "localCloseReason": "UTF-8 text message payload ended within Unicode code point at payload octet index 10",
+   "received": [],
+   "remoteCloseCode": 1000,
+   "remoteCloseReason": "No Error",
+   "reportCompressionRatio": false,
+   "reportTime": false,
+   "result": "Actual events match at least one expected.",
+   "resultClose": "The connection was failed by the wrong endpoint",
+   "rxFrameStats": {
+      "1": 1,
+      "8": 1
+   },
+   "rxOctetStats": {
+      "12": 2,
+      "242": 1
+   },
+   "started": "2017-03-19T14:39:26.205Z",
+   "trafficStats": null,
+   "txFrameStats": {
+      "1": 1,
+      "8": 1
+   },
+   "txOctetStats": {
+      "16": 1,
+      "92": 1,
+      "240": 1
+   },
+   "wasClean": true,
+   "wasCloseHandshakeTimeout": false,
+   "wasNotCleanReason": null,
+   "wasOpenHandshakeTimeout": false,
+   "wasServerConnectionDropTimeout": false,
+   "wirelog": [
+      [
+         "TO",
+         [
+            240,
+            "474554202f20485454502f312e310d0a557365722d4167656e743a204175746f6261686e5465737453756974652f302e372e352d302e31302e390d0a486f7374 ..."
+         ],
+         false
+      ],
+      [
+         "RO",
+         [
+            242,
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a5365727665723a204175746f6261686e5465737453756974652f302e372e ..."
+         ]
+      ],
+      [
+         "TF",
+         [
+            10,
+            "0xcebae1bdb9cf83cebcce"
+         ],
+         1,
+         true,
+         0,
+         "f7a03f46",
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            16,
+            "818af7a03f46391adefb4e6fbc884b6e"
+         ],
+         false
+      ],
+      [
+         "KL",
+         0.5
+      ],
+      [
+         "RO",
+         [
+            12,
+            "810acebae1bdb9cf83cebcce"
+         ]
+      ],
+      [
+         "RF",
+         [
+            10,
+            "0xcebae1bdb9cf83cebcce"
+         ],
+         1,
+         true,
+         0,
+         false,
+         null
+      ],
+      [
+         "TF",
+         [
+            86,
+            "0x03ef5554462d382074657874206d657373616765207061796c6f616420656e6465642077697468696e20556e69636f646520636f646520706f696e7420617420 ..."
+         ],
+         8,
+         true,
+         0,
+         "5b06fe98",
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            92,
+            "88d65b06fe9858e9abcc1d2bc6b82f6386ec7b6b9beb286799fd7b769fe137699ffc7b6390fc3e62deef327296f13526abf6326591fc3e269df73f63dee8346f ..."
+         ],
+         false
+      ],
+      [
+         "RO",
+         [
+            12,
+            "880a03e84e6f204572726f72"
+         ]
+      ],
+      [
+         "RF",
+         [
+            10,
+            "0x03e84e6f204572726f72"
+         ],
+         8,
+         true,
+         0,
+         false,
+         null
+      ]
+   ]
+}
